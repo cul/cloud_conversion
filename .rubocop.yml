@@ -19,3 +19,7 @@ AllCops:
 
 Lint/MissingCopEnableDirective:
   Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/cloud_conversion/aws/conversion.rb'

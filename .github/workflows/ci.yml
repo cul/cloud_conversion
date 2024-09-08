@@ -16,6 +16,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - run: sudo apt-get update
+      - name: (Conditional) Install default apt-provided version of libvips
+        run: sudo apt-get install -y libvips42
       - name: Add --no-document option to .gemrc file to speed up bundle install
         run: "echo 'gem: --no-document' > ~/.gemrc"
       - name: Set up Ruby
